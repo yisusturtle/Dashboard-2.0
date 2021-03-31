@@ -1,7 +1,3 @@
-//Intro items (para transicion de carga GSAP)
-gsap.from('.login-container',{duration: 2, x:'-100%',opacity:0 ,ease: 'elastic', delay:0.5})
-
-//main.js
 /*LOGIN-REGISTER*/
 const login = document.getElementById('login');
 const register = document.getElementById('register');
@@ -12,36 +8,46 @@ const button_login = document.getElementById('go-login');
 const button_recover = document.getElementById('forgot');
 
 button_register.addEventListener('click',function(){
-    gsap.from('#register', {duration: 1, y:'-100%', opacity: 0, rotation:0, ease: 'bounce', delay:0.5});
     login.style.display= 'none';
-    register.style.display= 'block';
+    register.style.display= 'flex';
+    gsap.from('#register', {duration: 1, x:'-100%', opacity: 0, delay:0.5});
+    gsap.from('#form-titulo', {duration: 1, x:'-100%', opacity: 0, delay:0.6});
+    gsap.from('#logo-estatico', {duration: 1, y:'-100%', opacity: 0, delay:0.5});imagen-cohete
 });
 
 button_login.addEventListener('click',function(){
-    gsap.from('#login', {duration: 1, y:'-100%', opacity: 0, rotation:0, ease: 'bounce', delay:0.5});
     register.style.display= 'none';
-    login.style.display= 'block';
+    login.style.display= 'flex';
+    gsap.from('#login', {duration: 1, x:'-100%', opacity: 0, delay:0.5});
+    gsap.from('#form-titulo', {duration: 1, x:'-100%', opacity: 0, delay:0.6});
+    gsap.from('#logo-estatico', {duration: 1, y:'-100%', opacity: 0, delay:0.5})
 });
 
 button_recover.addEventListener('click',function(){
-    gsap.from('#recovery', {duration: 1, y:'-100%', opacity: 0, rotation:0, ease: 'bounce', delay:0.5});
     login.style.display= 'none';
-    recover.style.display= 'block';
+    recover.style.display= 'flex';
+    gsap.from('#recovery', {duration: 1, x:'-100%', opacity: 0, delay:0.5});
+    gsap.from('#form-titulo', {duration: 1, x:'-100%', opacity: 0, delay:0.6});
+    gsap.from('#logo-estatico', {duration: 1, y:'-100%', opacity: 0, delay:0.5})
 });
 
 const back_register = document.getElementById('back-register');
 const back_login = document.getElementById('back-login');
 
 back_login.addEventListener('click',function(){
-    gsap.from('#login', {duration: 1, y:'-100%', opacity: 0, rotation:0, ease: 'bounce', delay:0.5});
     recover.style.display= 'none';
-    login.style.display= 'block';
+    login.style.display= 'flex';
+    gsap.from('#login', {duration: 1, x:'-100%', opacity: 0, delay:0.5});
+    gsap.from('#form-titulo', {duration: 1, x:'-100%', opacity: 0, delay:0.6});
+    gsap.from('#logo-estatico', {duration: 1, y:'-100%', opacity: 0, delay:0.5})
 });
 
 back_register.addEventListener('click',function(){
-    gsap.from('#register', {duration: 1, y:'-100%', opacity: 0, rotation:0, ease: 'bounce', delay:0.5});
     recover.style.display= 'none';
-    register.style.display= 'block';
+    register.style.display= 'flex';
+    gsap.from('#register', {duration: 1, x:'-100%', opacity: 0, delay:0.5});
+    gsap.from('#form-titulo', {duration: 1, x:'-100%', opacity: 0, delay:0.6});
+    gsap.from('#logo-estatico', {duration: 1, y:'-100%', opacity: 0, delay:0.5})
 });
 
 
