@@ -1,0 +1,4 @@
+1.Cambiar ruta de bd
+2.Incluir recuperar contraseña por email
+3.Cambiar IP de archivos de metodo GET src/podsjson y src/servicesjson
+4.poner enlaces de documentos y repositorios!!

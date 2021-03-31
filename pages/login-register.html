@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../src/img/logo.png" > <!--FAVICON-->
+    <link rel="stylesheet" href="../css/login-register.css">
+    <title>Dashboard</title>
+
+    <!--ICONOS FONTAWESOME-->
+    <script src="https://kit.fontawesome.com/755a2f5b9f.js" crossorigin="anonymous"></script>
+    <!---->
+    <script src="../js/validate_form.js"></script>
+</head>
+<body>
+    <!--GSAP (para animaciondes)-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <!---->
+    
+    <div class="container">
+        <!--LOGIN-->
+        <div class="login-container" id="login">
+            <h1 class="tit">Login</h1>
+            <div class="login-titulo">
+                <i class="fas fa-user-shield"></i>
+            </div>
+            <div class="login">
+                <form method="post" class="login-form" action="../src/login-register.php">
+                    <div class="form">
+                    <i class="fas fa-user-tie iconos"></i> <input type="email" name="email" id="email_comprobar" class="inputs" placeholder="Email" required>
+                    </div>
+                    <div class="form">
+                        <i class="fas fa-lock iconos"></i> <input type="password" name="password" class="inputs" id="password" placeholder="Contraseña" required>
+                    </div>
+                    <p><a href="#" id="forgot">¿Has olvidado tu contraseña?</a></p>
+                    <button type="submit" name="enviar-login">Entrar..</button>
+                </form>
+                <p class="no-cuenta">¿No tienes cuenta? <a href="#" id="go-register">Registrarse</a></p>
+            </div>
+        </div>
+        <!--REGISTRO-->
+        <div class="login-container" id="register">
+            <h1 class="tit">Registro</h1>
+            <div class="login-titulo">
+                <i class="fas fa-user-cog"></i>
+            </div>
+            <div class="login">
+                <form method="post" onsubmit="return validarPasswd()" class="login-form" id="login_form" action="../src/login-register.php">
+                    <div class="form">
+                    <i class="fas fa-user-tie iconos"></i> <input type="email" name="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="form">
+                        <i class="fas fa-unlock-alt"></i><input type="password" name="password" id="contraseña_1" placeholder="Contraseña" required>
+                        
+                    </div>
+                    <div class="form">
+                        <i class="fas fa-lock"></i> <input type="password" name="password2" id="contraseña_2" placeholder="Repita la ontraseña" required>
+                    </div>
+                    <div id="error"></div>
+                    <button type="submit" name="enviar-registrar" class="proccess">Registrarse..</button>
+                </form>
+                
+                <p class="no-cuenta">¿Tienes cuenta? <a href="#" id="go-login">Login</a></p>
+            </div>
+        </div>
+
+        <!--RECUPERAR CONTRASEÑA-->
+        <div class="login-container" id="recovery">
+            <h1 class="tit">Recuperar tu contraseña</h1>
+            <div class="login-titulo">
+                <i class="fas fa-user-times"></i>
+            </div>
+            <div class="login">
+                <form action="" method="post" class="login-form">
+                    <div class="form">
+                    <i class="fas fa-user-tie iconos"></i> <input type="email" name="email" id="email" class="inputs" placeholder="Email" required>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+                <div class="recover">
+                    <span>Se te enviará por el Email introducido un enlace</span> 
+                </div>
+                <p class="no-cuenta"><a href="#" id="back-login">Login</a> | <a href="#" id="back-register">Registro</a></p>
+            </div>
+            
+        </div>
+    </div>
+    <script src="../js/l_g.js"></script>
+</body>
+</html>
