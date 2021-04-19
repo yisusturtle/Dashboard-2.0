@@ -118,57 +118,7 @@
     <!--2º LANDING PAGE (pods y servicios)-->
     <div class="container2">
         <div class="subcontainer2">
-            <div class="pods pods-scroll" id="js-tablapods">
-                <div class="pods-titulo pods-titulos-scroll" id="pods">
-                    <h1 >PODS</h1>
-                </div>
-                <div class="pods-tabla">
-                    <table id="tablaPods">
-                        <thead class="thead">
-                            <tr>
-                                <th>POD Ip</th>
-                                <th>Nombre</th>
-                                <th>Namespace</th>
-                                <th>UID</th>
-                                <th>Estado</th>
-                            </tr>
-                        </thead>
-                        <tbody id="#tabla1" class="tbody tbody">
-                            <!--CON JS SE RELLENAN CON EL JSON DEL SERVER-->
-                        </tbody>                                     
-                    </table>
-                </div>
-            </div>
-            <div class="services servicios-scroll" id="js-tablaservicios">
-                <div class="pods-titulo pods-titulos-scroll" id="services">
-                    <h1 >SERVICIOS</h1>
-                </div>
-                <div class="pods-tabla">
-                    <table id="tablaServices">
-                        <thead class="thead">
-                            <tr>
-                                <th>ClusterIP</th>
-                                <th>Nombre</th>
-                                <th>Namespace</th>
-                                <th>UID</th>
-                            </tr>
-                        </thead>
-                        <tbody id="#tabla2" class="tbody tbody-scroll">
-                            <!--CON JS SE RELLENAN CON EL JSON DEL SERVER-->
-                        </tbody>
-                    </table>             
-                    </table>
-                </div>
-            </div>
-            <div class="change-section change-section-scroll">
-                <p>Al darle a "Servicios o Pods" cambias las tablas</p>
-                <div class="change-table">
-                    <i class="fas fa-server"></i>
-                    <button id="cambiar-servicios">SERVICIOS</button>
-                    <i class="fas fa-box-open"></i>
-                    <button id="cambiar-pods">PODS</button>
-                </div>
-            </div>
+            <a href="pages/dashboard.php">DASHBOARD</a>
         </div>
         
     </div>
@@ -227,7 +177,9 @@
         </div>
         
     </div>
-    <!---->
+    <script src="js/pods.js"></script>
+    <script src="js/services.js"></script>
+    
     <!--JS PRINCIPAL (FUNCIONALIDADES DE LA PAGINA)-->
     <script src="js/main.js"></script>
     <!---->

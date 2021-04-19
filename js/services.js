@@ -1,4 +1,8 @@
-const xhttp = new XMLHttpRequest();
+document.querySelector('#cambiar-servicios').addEventListener('click', traerDatos()); //Para que cada vez que le des a actualizar genere los nuevos campos
+
+function traerDatos(){ //Funcion encargada de recoger los datos y ejecutar la siguiente funcion para darle formato
+
+    const xhttp = new XMLHttpRequest();
     xhttp.open('GET', '../src/servicesjson.php' ,true); //Hace una GET al la ruta el servidor que recoge en el archivo php (services en este caso)
 
     xhttp.send();
@@ -28,3 +32,6 @@ const xhttp = new XMLHttpRequest();
             
         }
     }
+}
+
+

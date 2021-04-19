@@ -183,7 +183,30 @@ gsap.from('.jesus-jose', {
     delay:0.1}
 );
 
-//Scroll table
+//Cambio de tablas
+const toServicios = document.getElementById('cambiar-servicios');
+const toPods = document.getElementById('cambiar-pods');
+let tablaPods = document.getElementById('js-tablapods');
+let tablaServicios =document.getElementById('js-tablaservicios');
+let theadServicios = document.getElementById('thead-id');
+
+toServicios.addEventListener('click',function(){
+    tablaServicios.style.display="flex";
+    tablaPods.style.display="none";
+    gsap.from('.services', {duration: 1, x:"-100%"});
+    gsap.from('.pods-titulo', {duration: 1, x:"-100%",delay:0.5});
+    gsap.from('.tbody', {duration: 1, x:"-100%",delay:0.2, stragger:1});
+});
+
+toPods.addEventListener('click',function(){
+    tablaPods.style.display="flex";
+    tablaServicios.style.display="none";
+    gsap.from('.pods', {duration: 1, x:"-100%"});
+    gsap.from('.pods-titulo', {duration: 1, x:"-100%",delay:0.5});
+    gsap.from('.tbody', {duration: 1, x:"-100%",delay:0.2, stragger:1});
+});
+
+//Datetables JQUERY
 let alturaPantalla= (screen.height - 400)
 $('#tablaPods').DataTable( { //He desactivado todas las funciones del plugin, menos la del scroll
     "scrollY": `${alturaPantalla}px`,
@@ -205,27 +228,7 @@ $('#tablaServices').DataTable( { //He desactivado todas las funciones del plugin
     "info":false
 } );
 
-//Cambio de tablas
-const toServicios = document.getElementById('cambiar-servicios');
-const toPods = document.getElementById('cambiar-pods');
-let tablaPods = document.getElementById('js-tablapods');
-let tablaServicios =document.getElementById('js-tablaservicios');
 
-toServicios.addEventListener('click',function(){
-    tablaPods.style.display="none";
-    tablaServicios.style.display="flex";
-    gsap.from('.services', {duration: 1, x:"-100%"});
-    gsap.from('.pods-titulo', {duration: 1, x:"-100%",delay:0.5});
-    gsap.from('.tbody', {duration: 1, x:"-100%",delay:0.2, stragger:1})
-});
-
-toPods.addEventListener('click',function(){
-    tablaPods.style.display="flex";
-    tablaServicios.style.display="none";
-    gsap.from('.pods', {duration: 1, x:"-100%"});
-    gsap.from('.pods-titulo', {duration: 1, x:"-100%",delay:0.5});
-    gsap.from('.tbody', {duration: 1, x:"-100%",delay:0.2, stragger:1})
-});
 
 
 
