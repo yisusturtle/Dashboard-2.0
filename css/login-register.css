@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url('https://images.unsplash.com/photo-1613172837551-484eb5f450a5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80');
+    background-size: cover;
+    font-family:'Segoe UI';
+}
+
+.container{
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.705)
+}
+
+.wave{
+    width: 100%;
+}
+
+.wave img{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+}
+
+.subcontainer{
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont-form{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login{
+    margin-left: 7em;
+    margin-bottom: 5em;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.formulario{
+    background-color: #000000df;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: solid 2px #19bd2e;
+    padding: 2em;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+.formulario h1 {
+    margin-bottom: 1em;
+    color:white;
+    font-weight: 400;
+}
+
+.inputs{
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.inputs input:nth-child(2){
+    padding: 7px;
+    outline: none;
+    border: solid 2px #19bd2e;
+}
+
+.inputs i{
+    background-color: #19bd2e;
+    padding: 8.5px;
+    border: none;
+}
+
+.formulario p{
+    text-align:center;
+    color: white;
+    font-size: 15px;
+}
+
+.formulario p a{
+    text-decoration: none;
+    color: #497DD6;
+    font-size: 14px;
+}
+
+.formulario p a:hover{
+    color: #769ddf;
+}
+
+.inputs input:only-child{
+    outline: none;
+    width: 60%;
+    padding: 0.5em;
+    border: none;
+    background-color: #19bd2e;
+    border-radius: 17px;
+    margin-bottom: 2.5em;   
+}
+
+.inputs input:only-child:hover{
+    background-color: #53f569;
+    transform: scale(1.04);
+    transition: 0.5s;
+}
+
+.register-form{
+    display: none;
+}
+
+.recovery-form{
+    display: none;
+}
+
+/*IMAGEN*/
+.cont-img{
+    width: 45%;
+    height: 100%;
+}
+
+.imagen-logo{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+
+.imagen-logo img{
+    position: relative;
+    left: -42.4%;
+    width: 44%;
+    height: 50%;
+    top:-4%;
+    animation: escala 4s ease-in-out infinite;
+}
+
+.circulo{
+    width: 42%;
+    height: 42%;
+    box-shadow:0 0 50px #19bd2e, inset 0 0 50px #19bd2e ;
+    border-radius: 50%;
+    animation: animacion 6s linear infinite;
+    animation: escala 4s ease-in-out infinite;
+}
+
+@keyframes animacion{
+    0%{
+        box-shadow:0 0 50px #19bd2e, inset 0 0 50px #19bd2e ;
+    }
+    20%{
+        box-shadow:0 0 20px #19bd2e, inset 0 0 20px #19bd2e ;
+    }
+    40%{
+        box-shadow:0 0 30px #19bd2e, inset 0 0 30px #19bd2e ;
+    }
+    60%{
+        box-shadow:0 0 40px #19bd2e, inset 0 0 40px #19bd2e ;
+    }
+    80%{
+        box-shadow:0 0 50px #19bd2e, inset 0 0 50px #19bd2e ;
+    }
+    100%{
+        box-shadow:0 0 60px #19bd2e, inset 0 0 60px #19bd2e ;
+    }
+}
+
+@keyframes escala {
+    0%{
+        transform:scale(1) rotate(0deg);
+    }
+    50%{
+        transform: scale(1.05) rotate(-15deg);
+    }
+    100%{
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+#error{
+    background-color: salmon;
+    border:#B92E10 2px solid;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    display: none;
+    font-size: 12px;
+}
+
+/*RESPONSIVE*/
+@media (max-width: 1136px) {
+    .cont-img{
+        display: none;
+    }
+    .cont-form{
+        width: 100%;
+        padding: 0;
+    }
+    .login{
+        margin-left: 0em;
+        margin-bottom: 5em;
+    }
+    .formulario{
+        padding: 20px;
+    }
+}

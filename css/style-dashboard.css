@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap'); /* font-family: 'Source Code Pro', monospace; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap'); /* font-family: 'Roboto', sans-serif; */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    position: absolute;
+    width: 15vw;
+    bottom:0;
+    left: 0;
+    background-color: black;
+    padding: 1em;
+    padding-left: 1.3em;
+    padding-right: 1.3em;
+    color: white;
+    justify-content: space-around;
+    z-index: 98;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+.enlaces-content{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+    padding-bottom: 7px;
+    border-bottom: solid 2.5px #00C755;
+    transition: 0.5s ease-in;
+}
+
+.enlaces-content i{
+    margin-right: 10px;
+    color:#00C755;
+}
+
+.active::after{
+    content:'‣';
+    margin-left: 5px;
+    transition: 0.5s ease-in;
+}
+
+.enlaces-content:hover{
+    transform: translateX(3%);
+}
+
+
+.header-nav{
+    background-color: black;
+    height: 10vh;
+    color: white;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    top:0;
+    left: 0;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    z-index: 99;
+}
+
+.header-info{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+    font-size: 12px;
+    align-items:center
+}
+
+.header-info i{
+    margin-right: 5px;
+}
+
+.header-info span{
+    color: #00C755;
+}
+
+.container-sections{
+    background-color: rgb(255, 255, 255);
+    margin-left: 20vw;
+    margin-top: 15vh;
+    
+}
+
+#section2,#section3,#section4,#section5{
+    display: none;
+}
+
+.section{
+    font-family: 'Source Code Pro', monospace;
+}
+
+.section .titulo{
+    display: flex;
+    flex-direction: row;
+    background:#DCDCDC ;
+    width: 80%;
+    padding: 1em;
+    border-radius: 15px;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+    
+}
+
+.section .titulo i{
+    margin-right: 10px;
+    padding-left: 10px;
+}
+
+.deploy{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.deploy form{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+
+.wordpress, .apache, .nginx{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    border:solid 2px #DCDCDC;
+    margin-bottom: 5px;
+    margin-left:4px;
+    margin-right:4px;
+    padding: 1.5em;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#apache, #nginx{
+    display:none;
+}
+
+.wordpress i{
+    color:rgb(0, 119, 255);
+    font-size: 60px;
+    margin-bottom: 5px;
+}
+
+.selected{
+    background-color: #DCDCDC;
+    border-color: black;
+}
+
+.logos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.apache i{
+    color:rgb(255, 0, 0);
+    font-size: 60px;
+    margin-bottom: 5px;
+}
+
+.nginx i{
+    color:rgb(25, 151, 0);
+    font-size: 60px;
+    margin-bottom: 5px;
+}
+
+.wordpress, .apachem .nginx span{
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.text-inputs{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction:row;
+    margin-bottom: 15px; 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+.text-inputs input{
+    padding: 7px;
+    width: 50%;
+    /* border-radius: 10px; */
+    border: none;
+    border-bottom: solid 2px #DCDCDC;
+    outline: none;
+    padding-left: 10px;
+}
+
+.text-inputs span{
+    font-size: 15px;
+}
+
+form{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+form input:nth-child(3n){
+    padding: 0.7em;
+    padding-left:4em ;
+    padding-right: 4em;
+    border:solid 2px black;
+    color:white;
+    background-color: #343434;
+    border-radius:15px;
+    margin-top: 20px;
+}
+
+.enviar-datos input{
+    padding: 0.7em;
+    padding-left:4em ;
+    padding-right: 4em;
+    border:solid 2px black;
+    color:white;
+    background-color: #343434;
+    border-radius:15px;
+    margin-top: 20px;
+}
+
+.tablas{
+    display:flex;
+}
+
+table:nth-child(n1){
+    width: 70%;
+    border-collapse: collapse;
+}
+
+th{
+    border-bottom: solid rgb(0, 0, 0) 1px;
+}
+
+td{
+    border-bottom: solid rgb(187, 187, 187) 1px;
+    padding: 10px;
+}
+
+table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+.imagen-presentacion{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+}
+
+.no-work::after{
+    content: '*';
+    width: 100%;
+    color: red;
+    height: 5px;
+    position: relative;
+    top: 0;
+}

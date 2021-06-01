@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../src/img/logo.png" > <!--FAVICON-->
+    <link rel="stylesheet" href="../css/login-register.css">
+    <title>Dashboard</title>
+
+    <!--ICONOS FONTAWESOME-->
+    <script src="https://kit.fontawesome.com/755a2f5b9f.js" crossorigin="anonymous"></script>
+    <!---->
+
+    <script src="../js/validate_form.js"></script>
+</head>
+<body>
+    <!--GSAP (para animaciondes)-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <!---->
+    
+    <div class="container">
+        <div class="subcontainer">
+            <!--Login-Register-Recovery-->
+            <div class="cont-form">
+                <div class="login">
+                    <div class="logo" id="logo-estatico">
+                        <img src="../src/img/logo-banner.png" width="200px">
+                    </div>
+                    <!--Login-->
+                    <div class="formulario login-form" id="login">
+                        <h1 id="form-titulo">LOGIN</h1>
+                        <!--login-->
+                        <form action="../src/login-register.php" method="post">
+                            <div class="inputs">
+                                <i class="fas fa-user"></i>
+                                <input type="email" name="email" placeholder="Email" id="">
+                            </div>
+                            <div class="inputs">
+                                <i class="fas fa-key"></i>
+                                <input type="password" placeholder="Contraseña" name="password" id="">
+                            </div>
+                            <p><a href="#" id="forgot">¿Has olvidado la contraseña?</a></p>
+                            <div class="inputs">
+                                <input type="submit" value="Entrar" name="enviar-login" id="">
+                            </div>
+                            <p>¿No tienes cuenta? <a href="#" id="go-register">Registrarse</a></p>
+                        </form>
+                    </div>
+                    <!--Register-->
+                    <div class="formulario register-form" id="register">
+                        <h1 id="form-titulo">REGISTER</h1>                        
+                        <form method="post" onsubmit="return validarPasswd()" action="../src/login-register.php">
+                            <div class="inputs">
+                                <i class="fas fa-user"></i>
+                                <input type="email" name="email" placeholder="Email" id="">
+                            </div>
+                            <div class="inputs">
+                                <i class="fas fa-unlock-alt"></i>
+                                <input type="password" placeholder="Contraseña" name="password" id="contraseña_1">
+                            </div>
+                            <div class="inputs">
+                                <i class="fas fa-key"></i>
+                                <input type="password" placeholder="Contraseña" name="password2" id="contraseña_2">
+                            </div>
+                            <div id="error">a</div>
+                            <div class="inputs">
+                                <input type="submit" value="Registrarse" name="enviar-registrar" id="">
+                            </div>
+                            
+                            <p>¿Ya tienes cuenta? <a href="#" id="go-login">Logueate</a></p>
+                        </form>
+                    </div>
+                    <!--Recovery passwd-->
+                    <div class="formulario recovery-form" id="recovery">
+                        <h1 id="form-titulo">RECOVERY</h1>
+                        <!--login-->
+                        <form action="../src/login-register.php" method="post">
+                            <div class="inputs">
+                                <i class="fas fa-user"></i>
+                                <input type="email" name="email" placeholder="Email" id="">
+                            </div>
+                            <p>Se te enviará un email con un enlace para recuperar la contraseña</p>
+                            <div class="inputs">
+                                <input type="submit" value="Enviar" name="recover-passwd" id="">
+                            </div>
+                            <p>¿Quieres volver? <a href="#" id="back-login">Logueate</a> | <a href="#" id="back-register">Registrarse</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="cont-img">
+                <div class="imagen-logo">
+                    <div class="circulo"></div>
+                    <img src="../src/img/logo.png" width="200px">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/l_g.js"></script>
+</body>
+</html>

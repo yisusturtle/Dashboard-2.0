@@ -1,0 +1,5 @@
+{
+    "require": {
+        "renoki-co/php-k8s": "^2.7"
+    }
+}
