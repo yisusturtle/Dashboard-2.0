@@ -64,9 +64,8 @@ $tablaErrorLogs="CREATE TABLE ERROR_LOGS(
     id_error int AUTO_INCREMENT,
     email VARCHAR(100),
     fecha_error DATETIME,
-    /* CONSTRAINT PK_iderror PRIMARY KEY (id_error), NO ME DEJA PONERLAS PRIMARIA ME SALTA ERROR 
-    CONSTRAINT PK_email PRIMARY KEY (email), */
-    CONSTRAINT FK_iderror FOREIGN KEY (id_error) REFERENCES ERRORS(id_error),
+    CONSTRAINT PK_email PRIMARY KEY (email, id_error),
+    CONSTRAINT FK_iderror FOREIGN KEY (id_error) REFERENCES ERRORS(),
     CONSTRAINT FK_email FOREIGN KEY (email) REFERENCES users(email)
 );";
 
